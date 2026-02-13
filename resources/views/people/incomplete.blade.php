@@ -135,31 +135,50 @@
     <thead>
         <tr>
             <th>Αριθμός</th>
-            <th>Συγγραφέας</th>
+            <th>ΗΜΕΡΟΜΗΝΙΑ ΕΙΣΑΓΩΓΗΣ</th>
+            <th>ΣΥΓΓΡΑΦΕΑΣ</th>
             <th>KOHA</th>
-            <th>Τίτλος</th>
-            <th>Εκδότης</th>
-            <th>Έτος</th>
+            <th>ΤΙΤΛΟΣ</th>
+            <th>ΕΚΔΟΤΗΣ</th>
+            <th>ΕΚΔΟΣΗ</th>
+            <th>ΕΤΟΣ ΕΚΔΟΣΗΣ</th>
+            <th>ΤΟΠΟΣ ΕΚΔΟΣΗΣ</th>
+            <th>ΣΧΗΜΑ</th>
+            <th>ΣΕΛΙΔΕΣ</th>
+            <th>ΤΟΜΟΣ</th>
+            <th>ΤΡΟΠΟΣ ΠΡΟΜΗΘΕΙΑΣ / ΠΑΡΑΤΗΡΗΣΕΙΣ</th>
             <th>ISBN</th>
+            <th>ΣΤΗΛΗ 1</th>
+            <th>ΣΤΗΛΗ 2</th>
         </tr>
     </thead>
     <tbody>
         @forelse($records as $record)
         <tr>
-            <td>{{ $record->ari8mosEisagoghs }}</td>
+            <td>@if($record->ari8mosEisagoghs){{ $record->ari8mosEisagoghs }}@else<span class="null-field">NULL</span>@endif</td>
+            <td>@if($record->hmeromhnia_eis){{ $record->hmeromhnia_eis }}@else<span class="null-field">NULL</span>@endif</td>
             <td>@if($record->syggrafeas){{ $record->syggrafeas }}@else<span class="null-field">NULL</span>@endif</td>
             <td>@if($record->koha){{ $record->koha }}@else<span class="null-field">NULL</span>@endif</td>
             <td>@if($record->titlos){{ $record->titlos }}@else<span class="null-field">NULL</span>@endif</td>
             <td>@if($record->ekdoths){{ $record->ekdoths }}@else<span class="null-field">NULL</span>@endif</td>
+            <td>@if($record->ekdosh){{ $record->ekdosh }}@else<span class="null-field">NULL</span>@endif</td>
             <td>@if($record->etosEkdoshs){{ $record->etosEkdoshs }}@else<span class="null-field">NULL</span>@endif</td>
+            <td>@if($record->toposEkdoshs){{ $record->toposEkdoshs }}@else<span class="null-field">NULL</span>@endif</td>
+            <td>@if($record->sxhma){{ $record->sxhma }}@else<span class="null-field">NULL</span>@endif</td>
+            <td>@if($record->selides){{ $record->selides }}@else<span class="null-field">NULL</span>@endif</td>
+            <td>@if($record->tomos){{ $record->tomos }}@else<span class="null-field">NULL</span>@endif</td>
+            <td>@if($record->troposPromPar){{ $record->troposPromPar }}@else<span class="null-field">NULL</span>@endif</td>
             <td>@if($record->ISBN){{ $record->ISBN }}@else<span class="null-field">NULL</span>@endif</td>
+            <td>@if($record->sthlh1){{ $record->sthlh1 }}@else<span class="null-field">NULL</span>@endif</td>
+            <td>@if($record->sthlh2){{ $record->sthlh2 }}@else<span class="null-field">NULL</span>@endif</td>
         </tr>
         @empty
         <tr>
-            <td colspan="7" style="text-align: center;">No incomplete records found!</td>
+            <td colspan="16" style="text-align: center;">No incomplete records found!</td>
         </tr>
         @endforelse
     </tbody>
 </table>
+
 
 </x-app-layout>
