@@ -13,7 +13,10 @@
     width: 400px;
     margin: 20px auto;
 ">
-    <h2 style="text-align:center;margin-bottom:20px;">Μεταφόρτωση αρχείου Excel</h2>
+    <h2 style="text-align:center; margin-bottom:20px; font-weight:bold;">
+        Μεταφόρτωση αρχείου Excel
+    </h2>
+
 
     <p>📥 Από εδώ μπορείτε να ανεβάσετε αρχείο Excel για ενημέρωση ή εισαγωγή δεδομένων.</p>
 
@@ -36,7 +39,10 @@
             cursor:pointer;
         ">Μεταφόρτωση αρχείου</button>
 
-        <h3 style="margin-top:20px;">ℹ️ Οδηγίες πριν τη μεταφόρτωση</h3>
+       <h3 class="mt-5 font-bold">
+        ℹ️ Οδηγίες πριν τη μεταφόρτωση
+    </h3>
+
         <ul style="font-size:0.85em;">
             <li>✅ Το αρχείο πρέπει να είναι σε μορφή <strong>.xlsx</strong> ή <strong>.xls</strong></li>
             <li>📌 Βεβαιωθείτε ότι τα δεδομένα είναι σωστά και πλήρη</li>
